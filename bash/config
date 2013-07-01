@@ -1,6 +1,3 @@
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-
 # Colors from http://wiki.archlinux.org/index.php/Color_Bash_Prompt
 # misc
 NO_COLOR='\e[0m' #disable any colors
@@ -44,16 +41,6 @@ BWHITE='\e[47m'
 # Update the command prompt to be <user>:<current_directory>(git_branch) >
 # Note that the git branch is given a special color
 # PS1="\n\u:\w \[$BLUE\]\$(vcprompt)\[$NO_COLOR\] \n→ "
-
-
-
-
-## Installs Bash Git completion if not present
-# 	requires bash-completion istalled
-# 	`brew install git bash-completion`
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi
 
 # display <rvm> <pwd> (git_branch)
  export PS1="\[$EBLUE\]\$(~/.rvm/bin/rvm-prompt) \[$NO_COLOR\] \w\[$RED\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\] \[\033[00m\] \n$ "
