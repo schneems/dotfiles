@@ -1,0 +1,14 @@
+export EDITOR="subl -w"
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+
+
+export NODE_PATH="/usr/local/lib/node"
+
+# Set PATH, CDPATH, EDITOR, etc.
+
+
+export CPPFLAGS=-I/opt/X11/include
+
+
+# vim keybindings in bash
+set -o vi
