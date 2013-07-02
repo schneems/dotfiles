@@ -42,5 +42,16 @@ BWHITE='\e[47m'
 # Note that the git branch is given a special color
 # PS1="\n\u:\w \[$BLUE\]\$(vcprompt)\[$NO_COLOR\] \n→ "
 
-# display <rvm> <pwd> (git_branch)
- export PS1="\[$EBLUE\]\$(~/.rvm/bin/rvm-prompt) \[$NO_COLOR\] \w\[$RED\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\] \[\033[00m\] \n$ "
+## Installs Bash Git completion if not present
+#   requires bash-completion istalled
+#   `brew install git bash-completion`
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+else
+    echo "run: brew install git bash-completion"
+fi
+
+
+# display <rbenv version-name> <pwd> (git_branch)
+ export PS1="\[$EBLUE\]\$(rbenv version-name) \[$NO_COLOR\] \w\[$RED\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\] \[\033[00m\] \n$ "
+
