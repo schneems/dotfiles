@@ -1,0 +1,8 @@
+# OSX Hacks
+
+# Allow key repeats
+defaults write -g ApplePressAndHoldEnabled -bool false
+
+# View Hidden Files
+defaults write com.apple.Finder AppleShowAllFiles YES
+killall Finder
