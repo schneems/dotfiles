@@ -42,12 +42,15 @@ Follow these steps:
 - Change dock to auto hide
 - set up dropbox
 - set up 1password
-
-(download sublime)
-(download chrome)
-(generate RSA key)
-(add RSA key to github)
-(hipmunk)
-(iterm2)
+- download sublime
+- download chrome
+- generate RSA key
+- add RSA key to github
+- hipchat
+- iterm2
+- mvim
+- gitx
+- copy .gitconfig
+- install janus: https://github.com/carlhuda/janus
 
 
