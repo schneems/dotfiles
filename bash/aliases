@@ -1,6 +1,4 @@
-alias git='hub'
 alias be='bundle exec'
-
 
 # Command Enhancements
 
@@ -63,7 +61,7 @@ alias hist="puts Readline::HISTORY.entries.split("exit").last[0..-2].join("\n")"
 
 
 # Utility
-alias reload!='source ~/bin/dotfiles/bash/aliases'
+alias reload!='source ~/bin/dotfiles/bashrc'
 alias ea='mate -w ~/bin/dotfiles/bash/aliases && reload' # Edit aliases
 alias ee="mate ~/bin/dotfiles/bash/env"
 

@@ -1,7 +1,7 @@
 export EDITOR="subl -w"
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
-
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 export NODE_PATH="/usr/local/lib/node"
 
@@ -16,4 +16,6 @@ set -o vi
 
 
 # rb-env
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+chruby 2.1.1

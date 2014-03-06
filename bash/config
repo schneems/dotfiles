@@ -52,6 +52,6 @@ else
 fi
 
 
-# display <rbenv version-name> <pwd> (git_branch)
- export PS1="\[$EBLUE\]\$(rbenv version-name) \[$NO_COLOR\] \w\[$RED\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\] \[\033[00m\] \n$ "
+# display <chruby version> <pwd> (git_branch)
+export PS1="\[$EBLUE\]\$RUBY_VERSION \[$NO_COLOR\] \w\[$RED\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\] \[\033[00m\] \n$ "
 

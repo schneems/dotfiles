@@ -6,3 +6,6 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 # View Hidden Files
 defaults write com.apple.Finder AppleShowAllFiles YES
 killall Finder
+
+# disable mute while typing google hangouts
+defaults write com.google.googletalkplugind exps -string [\"-tm\"]
