@@ -9,7 +9,7 @@ Warning, these are not 1337 dotfiles. They are optimized for a work environment 
 
 ## Install
 
-You need homebrew, git, and rbenv installed first
+You need homebrew, git, and chruby installed first
 
 ```
 mkdir ~/bin
@@ -42,6 +42,8 @@ xcode-select --install
 ```
 
 - Install Setup script: (https://github.com/thoughtbot/laptop)
+- `brew install chruby ruby-install git bash-completion`
+- `ruby-install ruby`
 - Dotfiles: see install (https://github.com/schneems/dotfiles)
 - Increase repeat rate on keyboard
 - Change dock to auto hide
