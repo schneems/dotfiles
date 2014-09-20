@@ -12,8 +12,9 @@ Warning, these are not 1337 dotfiles. They are optimized for a work environment 
 You need homebrew, git, and rbenv installed first
 
 ```
+mkdir ~/bin
 cd ~/bin
-git clone git@github.com:schneems/dotfiles.git
+git clone https://github.com/schneems/dotfiles.git
 touch ~/.bashrc
 echo "source ~/bin/dotfiles/bashrc" >> ~/.bashrc
 ```
@@ -34,17 +35,22 @@ fi" >> ~/.bash_profile
 
 Follow these steps:
 
-- Download Xcode
-- Install command line tools
-- Setup script: (https://github.com/thoughtbot/laptop)
+- Install [command line tools](http://stackoverflow.com/questions/9329243/xcode-4-4-and-later-install-command-line-tools)
+
+```
+xcode-select --install
+```
+
+- Install Setup script: (https://github.com/thoughtbot/laptop)
 - Dotfiles: see install (https://github.com/schneems/dotfiles)
 - Increase repeat rate on keyboard
 - Change dock to auto hide
 - set up dropbox
 - set up 1password
-- download sublime
-- download chrome
-- generate RSA key
+- download [sublime]()
+- download [chrome]()
+- Heroku [Toolbelt](https://toolbelt.heroku.com)
+- generate RSA key []()
 - add RSA key to github
 - hipchat
 - iterm2
