@@ -4,7 +4,7 @@ export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 export NODE_PATH="/usr/local/lib/node"
 
-expor DISABLE_SPRING="true"
+export DISABLE_SPRING="true"
 
 # Set PATH, CDPATH, EDITOR, etc.
 
