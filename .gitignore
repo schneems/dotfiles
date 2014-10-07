@@ -1,6 +1,4 @@
 # shhhhh, secrets
 .env
-
 .DS_Store
-
 bash/.env
