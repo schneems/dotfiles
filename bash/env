@@ -1,5 +1,5 @@
 export EDITOR="subl -w"
-export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:~/root/bin:$PATH"
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 export NODE_PATH="/usr/local/lib/node"
