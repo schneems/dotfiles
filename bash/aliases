@@ -7,6 +7,8 @@ function ruby_19_hash {
 
 # Command Enhancements
 
+alias rm=trash
+
 alias start_redis='redis-server /usr/local/etc/redis.conf &'
 alias start_postgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias start_cassandra='cassandra -f'
@@ -22,7 +24,6 @@ alias octave="/Applications/Octave.app/Contents/Resources/bin/octave;"
 alias wp='cd ~/Sites/public'
 
 alias hurl='name_tab hurl; proj; cd hurl; bundle exec shotgun config.ru'
-alias key='cd ~/documents/projects/keytar && rvm use ree && rvm gemset use keytar'
 
 alias pf='cd ~/documents/projects/potential_friend_finder'
 
@@ -96,11 +97,6 @@ _complete_git() {
 }
 complete -F _complete_git git checkout
 
-# Quicker cd
-alias cg='cd /Library/Ruby/Gems/1.8/gems/'
-function cr() {
- cd ~/repos/$*
-}
 
 # Common -- Some are from Damian Conway
 alias a='ls -A' # -A all except literal . ..
