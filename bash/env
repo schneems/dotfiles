@@ -19,4 +19,4 @@ set -o vi
 # rb-env
 # eval "$(rbenv init -)"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
-chruby 2.2.0
+chruby 2 # $(chruby | tail -n 1 | sed s/*//) # grabs the latest installed ruby
