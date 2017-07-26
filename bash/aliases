@@ -1,5 +1,6 @@
+alias h='heroku'
 alias be='bundle exec'
-
+alias dbundle='ruby -I ~/documents/projects/bundler/lib ~/documents/projects/bundler/exe/bundle'
 
 function ruby_19_hash {
   find . -name $1 -exec perl -p -i -e 's/([^:]):(\w+)\s*=>/\1\2:/g' {} \;
@@ -31,8 +32,6 @@ alias anti='cd ~/documents/presentations/thoughtbot-workshop_slides/rails-antipa
 alias proj='cd ~/documents/projects'
 alias hero='cd ~/documents/projects/heroku'
 
-
-alias go='cd ~/documents/projects/gowalla-rails'
 alias rr='name_tab routes; rake routes | mate'
 alias mod='cd ~/documents/projects/hacketyHack/modesty'
 
@@ -51,19 +50,8 @@ alias go:bl='go; name_tab go:server ; compass compile; BRUCELEE_WEB=true bundle 
 alias go:solr='go; rake sunspot:solr:start'
 
 
-alias hour='proj; cd hourschool'
-alias go:log="name_tab go:log && go && tail -f log/development.log"
 
-alias ga='cd ~/documents/projects/android/gowalla-android'
-
-alias sl='cd ~/documents/projects/stats-logger'
-
-alias why='cd ~/documents/projects/whyspam'
-alias ss="script/server"
-alias rs="rails server"
-alias hadouken="git pull --rebase && git push origin master"
-
-alias hist="puts Readline::HISTORY.entries.split("exit").last[0..-2].join("\n")"
+alias hist='puts Readline::HISTORY.entries.split("exit").last[0..-2].join("\n")'
 
 
 # Utility
