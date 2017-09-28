@@ -3,7 +3,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:~/bin:~/root/bin:$PATH"
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 export GOPATH="~/documents/projects/gohomecode"
 export PATH="$GOPATH/bin:$PATH"
-
+export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -25,3 +25,4 @@ set -o vi
 # eval "$(rbenv init -)"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 chruby 2 # $(chruby | tail -n 1 | sed s/*//) # grabs the latest installed ruby
+
