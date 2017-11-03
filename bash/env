@@ -1,9 +1,9 @@
 export EDITOR="subl -w"
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:~/root/bin:$PATH"
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 export GOPATH="~/documents/projects/gohomecode"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"  # brew python
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -19,6 +19,7 @@ export CPPFLAGS=-I/opt/X11/include
 
 # vim keybindings in bash
 set -o vi
+
 
 
 # rb-env

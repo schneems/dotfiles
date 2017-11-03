@@ -57,8 +57,8 @@ xcode-select --install
 - hipchat
 - iterm2
 - mvim
-- gitx
-- copy .gitconfig
+- gitx https://rowanj.github.io/gitx/ 
+- copy .gitconfig https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
 - install janus: https://github.com/carlhuda/janus
 
 
