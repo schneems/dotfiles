@@ -55,3 +55,7 @@ fi
 # display <chruby version> <pwd> (git_branch)
 export PS1="⛄  \[$EBLUE\]\$RUBY_VERSION \[$NO_COLOR\]🚀  \w\[$RED\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\] \[\033[00m\] \n$ "
 
+# Set tab value to current folder name
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"';
+
+

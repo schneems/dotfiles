@@ -17,7 +17,6 @@ alias start_memcached='launchctl load -w /usr/local/Cellar/memcached/1.4.5/com.d
 alias ud='cd ~/documents/projects/united-dictionary'
 alias start_mysql='launchctl load -w /usr/local/Cellar/mysql/5.1.49/com.mysql.mysqld.plist'
 
-
 alias console='name_tab console; pry' # https://github.com/pry/pry/wiki/Setting-up-Rails-to-use-Pry
 alias server='rails s thin'
 
@@ -49,8 +48,6 @@ alias go:cl='go; name_tab go:chronologic; bundle exec rackup -p 9292 local/chron
 alias go:bl='go; name_tab go:server ; compass compile; BRUCELEE_WEB=true bundle exec unicorn_rails -c local/unicorn.conf'
 alias go:solr='go; rake sunspot:solr:start'
 
-
-
 alias hist='puts Readline::HISTORY.entries.split("exit").last[0..-2].join("\n")'
 
 
@@ -59,19 +56,10 @@ alias reload!='source ~/bin/dotfiles/bashrc'
 alias ea='mate -w ~/bin/dotfiles/bash/aliases && reload' # Edit aliases
 alias ee="mate ~/bin/dotfiles/bash/env"
 
-
-## default tab name ##
-PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
-
 ## custom tab name ###
 function name_tab {
   echo -n -e "\033]0;$1\007"
 }
-
-## RVM & GIT Repo name in Terminal
-[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion # for RVM completion
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then source `brew --prefix`/etc/bash_completion.d/git-completion.bash; fi # for Git completion
-
 
 ## Git Autocomplete ##
 
