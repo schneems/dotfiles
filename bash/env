@@ -1,9 +1,14 @@
+# which -a python
+
 export EDITOR="subl -w"
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:~/root/bin:$PATH"
 export GOPATH="~/documents/projects/gohomecode"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"  # brew python
+export PATH=$PATH:/usr/local/opt/go/libexec/bi
+export PATH="/usr/local/opt/python@2/bin:$PATH"
+export PATH="$PATH:/anaconda2/bin"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 

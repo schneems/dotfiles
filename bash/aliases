@@ -1,3 +1,6 @@
+alias asbot='~/documents/projects/badger/bin/asbot'
+alias badger='~/documents/projects/badger/bin/badger'
+
 alias h='heroku'
 alias be='bundle exec'
 alias dbundle='ruby -I ~/documents/projects/bundler/lib ~/documents/projects/bundler/exe/bundle'
@@ -20,7 +23,6 @@ alias start_mysql='launchctl load -w /usr/local/Cellar/mysql/5.1.49/com.mysql.my
 alias console='name_tab console; pry' # https://github.com/pry/pry/wiki/Setting-up-Rails-to-use-Pry
 alias server='rails s thin'
 
-alias octave="/Applications/Octave.app/Contents/Resources/bin/octave;"
 alias wp='cd ~/Sites/public'
 
 alias hurl='name_tab hurl; proj; cd hurl; bundle exec shotgun config.ru'
