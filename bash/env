@@ -19,7 +19,6 @@ export PATH="/anaconda2/bin:$PATH"
 # added by Anaconda2 5.1.0 installer
 # export PATH="/Users/rschneeman/anaconda2/bin:$PATH"
 
-
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export NODE_PATH="/usr/local/lib/node"
@@ -28,14 +27,7 @@ export DISABLE_SPRING="true"
 
 # Set PATH, CDPATH, EDITOR, etc.
 
-
 export CPPFLAGS=-I/opt/X11/include
-
-
-# vim keybindings in bash
-set -o vi
-
-
 
 # rb-env
 # eval "$(rbenv init -)"
