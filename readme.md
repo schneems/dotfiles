@@ -17,21 +17,22 @@ cd ~/bin
 git clone https://github.com/schneems/dotfiles.git
 touch ~/.bashrc
 echo "source ~/bin/dotfiles/bashrc" >> ~/.bashrc
-```
-
-then:
-
-```sh
 # Link bashrc to bashprofile
 touch ~/.bash_profile
 echo "
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi" >> ~/.bash_profile
+source ~/bin/dotfiles/bashrc
 ```
 
 
 ## New Lappie?
+
+```
+source osx/hacks
+```
+
 
 Follow these steps:
 

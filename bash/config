@@ -42,6 +42,7 @@ BWHITE='\e[47m'
 # Note that the git branch is given a special color
 # PS1="\n\u:\w \[$BLUE\]\$(vcprompt)\[$NO_COLOR\] \n→ "
 
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 ## Installs Bash Git completion if not present
 #   requires bash-completion istalled
 #   `brew install git bash-completion`

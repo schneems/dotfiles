@@ -9,3 +9,17 @@ killall Finder
 
 # disable mute while typing google hangouts
 defaults write com.google.googletalkplugind exps -string [\"-tm\"]
+
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+
+defaults write com.apple.Dock orientation -string left
+defaults write com.apple.Dock autohide -bool TRUE
+killall Dock # force setting to take affect
+
+# Disable smart quotes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+defaults write com.apple.TextEdit SmartQuotes -bool false
+defaults write com.apple.TextEdit SmartDashes -bool false
+
