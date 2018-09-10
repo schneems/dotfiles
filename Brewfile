@@ -18,6 +18,7 @@ brew "mas"
 brew "memcached", restart_service: true
 brew "node"
 brew "readline"
+brew "postgresql", restart_service: true
 brew "redis", restart_service: true
 brew "ruby-install"
 brew "sshfs"
@@ -25,16 +26,14 @@ brew "trash"
 brew "yarn"
 brew "youtube-dl"
 brew "heroku/brew/heroku"
-
 cask "1password"
 cask "dropbox"
 cask "firefox"
 cask "iterm2"
+cask "screenflow"
 cask "spotify"
 cask "sublime-text"
 cask "visual-studio-code"
-cask "screenflow"
-
 mas "3Hub", id: 427515976
 mas "Alfred", id: 405843582
 mas "Bear", id: 1091189122
