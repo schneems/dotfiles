@@ -1,9 +1,10 @@
-alias asbot='~/documents/projects/badger/bin/asbot'
-alias badger='~/documents/projects/badger/bin/badger'
+alias asbot='~/Documents/projects/badger/bin/asbot'
+alias badger='~/Documents/projects/badger/bin/badger'
 
 alias h='heroku'
 alias be='bundle exec'
-alias dbundle='ruby -I ~/documents/projects/bundler/lib ~/documents/projects/bundler/exe/bundle'
+alias b='bundle exec'
+alias dbundle='ruby -I ~/Documents/projects/bundler/lib ~/Documents/projects/bundler/exe/bundle'
 
 function ruby_19_hash {
   find . -name $1 -exec perl -p -i -e 's/([^:]):(\w+)\s*=>/\1\2:/g' {} \;
@@ -17,7 +18,6 @@ alias start_redis='redis-server /usr/local/etc/redis.conf &'
 alias start_postgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias start_cassandra='cassandra -f'
 alias start_memcached='launchctl load -w /usr/local/Cellar/memcached/1.4.5/com.danga.memcached.plist'
-alias ud='cd ~/documents/projects/united-dictionary'
 alias start_mysql='launchctl load -w /usr/local/Cellar/mysql/5.1.49/com.mysql.mysqld.plist'
 
 alias console='name_tab console; pry' # https://github.com/pry/pry/wiki/Setting-up-Rails-to-use-Pry
@@ -27,28 +27,7 @@ alias wp='cd ~/Sites/public'
 
 alias hurl='name_tab hurl; proj; cd hurl; bundle exec shotgun config.ru'
 
-alias pf='cd ~/documents/projects/potential_friend_finder'
-
-alias anti='cd ~/documents/presentations/thoughtbot-workshop_slides/rails-antipatterns'
-alias proj='cd ~/documents/projects'
-alias hero='cd ~/documents/projects/heroku'
-
-alias rr='name_tab routes; rake routes | mate'
-alias mod='cd ~/documents/projects/hacketyHack/modesty'
-
-alias bacon="cd ~/documents/projects/baconalytics"
-alias go:boot='go; lunchy start postgres; lunchy start redis; lunchy start cassandra; lunchy start memcached; go:solr; go:cl'
-alias go:sleep='lunchy stop postgres; lunchy stop redis; lunchy stop cassandra; lunchy stop memcached'
-alias go:unicorn='name_tab go:server ; go ; bundle exec unicorn_rails -c local/unicorn.conf'
-alias go:spork='name_tab go:spork ; go ; spork'
-alias go:staging='ssh root@ec2-184-72-88-222.compute-1.amazonaws.com'
-alias go:console='go; console'
-alias go:guard='go; name_tab go:guard; guard'
-alias go:cl:test='go; name_tab go:chronologic; bundle exec rackup -p 9292 local/chronologic_test.ru'
-alias go:cl='go; name_tab go:chronologic; bundle exec rackup -p 9292 local/chronologic.ru'
-
-alias go:bl='go; name_tab go:server ; compass compile; BRUCELEE_WEB=true bundle exec unicorn_rails -c local/unicorn.conf'
-alias go:solr='go; rake sunspot:solr:start'
+alias proj='cd ~/Documents/projects'
 
 alias hist='puts Readline::HISTORY.entries.split("exit").last[0..-2].join("\n")'
 
@@ -138,7 +117,3 @@ alias eg='mate .git/config'
 function gch() {
   git clone git://github.com/$USER/$1.git
 }
-
-
-
-
