@@ -1,32 +1,21 @@
+#!/usr/bin/env bash
+
 # which -a python
 
-export EDITOR="subl -w"
+export EDITOR="code -w"
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:~/root/bin:$PATH"
 export GOPATH="$HOME/documents/projects/gohomecode"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"  # brew python
 export PATH=$PATH:/usr/local/opt/go/libexec/bi
-export PATH="/usr/local/opt/python@2/bin:$PATH"
-export PATH="/usr/local/opt/opencv@2/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 
-## export PATH="$PATH:/anaconda2/bin"
-# added by Anaconda2 5.1.0 installer
-export PATH="/anaconda2/bin:$PATH"
-
-# added by Anaconda2 5.1.0 installer
-# export PATH="/Users/rschneeman/anaconda2/bin:$PATH"
-
 export PATH="$HOME/.cargo/bin:$PATH"
-
 export NODE_PATH="/usr/local/lib/node"
-
 export DISABLE_SPRING="true"
 
 # Set PATH, CDPATH, EDITOR, etc.
-
 export CPPFLAGS=-I/opt/X11/include
 
 # rb-env
@@ -34,4 +23,3 @@ export CPPFLAGS=-I/opt/X11/include
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 chruby 2.5 # $(chruby | tail -n 1 | sed s/*//) # grabs the latest installed ruby
 
-export NODE_OPTIONS=--no-warnings
