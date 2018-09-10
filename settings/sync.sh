@@ -6,6 +6,10 @@ ln -s ~/Dropbox/Sublime/User
 ## Iterm2
 ln -s "~/Dropbox/shared_settings/iterm2/com.googlecode.iterm2.plist" ~/Library/Preferences/com.googlecode.iterm2.plist
 
+## Project folder
+echo "Set up project folder"
+ln -s ~/Dropbox/projects ~/Documents/projects
+
 ## Git Aliases
 git config --global alias.co checkout
 git config --global alias.br branch
