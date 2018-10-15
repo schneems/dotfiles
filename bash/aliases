@@ -1,6 +1,9 @@
 alias asbot='~/Documents/projects/badger/bin/asbot'
 alias badger='~/Documents/projects/badger/bin/badger'
+alias gitx.='gitx .'
 
+alias amdone='afplay /System/Library/Sounds/Submarine.aiff'
+alias hbr='proj; cd heroku-buildpack-ruby'
 alias h='heroku'
 alias be='bundle exec'
 alias b='bundle exec'

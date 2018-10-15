@@ -7,8 +7,8 @@ ln -s ~/Dropbox/Sublime/User
 ln -s "~/Dropbox/shared_settings/iterm2/com.googlecode.iterm2.plist" ~/Library/Preferences/com.googlecode.iterm2.plist
 
 ## Project folder
-echo "Set up project folder"
-ln -s ~/Dropbox/projects ~/Documents/projects
+# echo "Set up project folder"
+# ln -s ~/Dropbox/projects ~/Documents/projects
 
 ## Git Aliases
 git config --global alias.co checkout
@@ -37,7 +37,10 @@ heroku autocomplete
 
 # Text editors
 echo "setting up text editors"
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-ln -s "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ~/bin/code
+# ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+# ln -s "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ~/bin/code
 
 
+echo "setting up bundler"
+gem install bundler
+bundle config --global jobs $(sysctl -n hw.ncpu)

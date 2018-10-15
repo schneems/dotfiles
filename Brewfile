@@ -6,6 +6,7 @@ tap "homebrew/core"
 tap "homebrew/services"
 cask "osxfuse"
 brew "automake"
+
 brew "bash-completion"
 brew "bison"
 brew "chruby"
@@ -19,6 +20,7 @@ brew "memcached", restart_service: true
 brew "node"
 brew "readline"
 brew "postgresql", restart_service: true
+brew "mysql"
 brew "redis", restart_service: true
 brew "ruby-install"
 brew "sshfs"
@@ -26,6 +28,7 @@ brew "trash"
 brew "yarn"
 brew "youtube-dl"
 brew "heroku/brew/heroku"
+brew "qt@5.5"
 cask "1password"
 cask "dropbox"
 cask "firefox"
@@ -34,6 +37,7 @@ cask "screenflow"
 cask "spotify"
 cask "sublime-text"
 cask "visual-studio-code"
+cask "flux"
 mas "3Hub", id: 427515976
 mas "Alfred", id: 405843582
 mas "Bear", id: 1091189122

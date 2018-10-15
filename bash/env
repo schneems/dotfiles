@@ -2,11 +2,11 @@
 
 # which -a python
 
-export EDITOR="code -w"
+export EDITOR="subl -w"
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:~/root/bin:$PATH"
 export GOPATH="$HOME/documents/projects/gohomecode"
 export PATH="$GOPATH/bin:$PATH"
-# export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
+export PATH="/usr/local/opt/qt@5.5/bin:$PATH" # export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bi
 
 export NVM_DIR="$HOME/.nvm"
