@@ -38,22 +38,20 @@ BMAGENTA='\e[45m'
 BCYAN='\e[46m'
 BWHITE='\e[47m'
 
-# Update the command prompt to be <user>:<current_directory>(git_branch) >
-# Note that the git branch is given a special color
-# PS1="\n\u:\w \[$BLUE\]\$(vcprompt)\[$NO_COLOR\] \n→ "
-
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 ## Installs Bash Git completion if not present
 #   requires bash-completion istalled
 #   `brew install git bash-completion`
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+if [ -f /usr/local/etc/bash_completion ]; then
+  . /usr/local/etc/bash_completion
 else
-    echo "run: brew install git bash-completion"
+  echo "run: brew install git bash-completion"
 fi
+# if [ -f `brew --prefix`/etc/bash_completion ]; then
+#. . `brew --prefix`/etc/bash_completion
+# fi
 
 # display <chruby version> <pwd> (git_branch)
-export PS1="⛄  \[$EBLUE\]\$RUBY_VERSION \[$NO_COLOR\]🚀  \w\[$RED\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\] \[\033[00m\] \n$ "
+export PS1="⛄ \[$EBLUE\]\$RUBY_VERSION \[$NO_COLOR\]🚀  \w\[$RED\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\] \[\033[00m\] \n$ "
 
 # Set tab value to current folder name
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"';

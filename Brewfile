@@ -7,6 +7,8 @@ tap "homebrew/services"
 cask "osxfuse"
 brew "automake"
 
+brew "pkg-config"
+brew "imagemagick"
 brew "bash-completion"
 brew "bison"
 brew "chruby"
