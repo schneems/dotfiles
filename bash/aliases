@@ -2,15 +2,23 @@ alias asbot='~/Documents/projects/badger/bin/asbot'
 alias badger='~/Documents/projects/badger/bin/badger'
 alias gitx.='gitx .'
 
+# notifyme
 function amdone {
-
   if [ $? -eq 0 ]
   then
     afplay /System/Library/Sounds/Submarine.aiff
   else
     afplay /System/Library/Sounds/Blow.aiff
   fi
+}
 
+# https://gist.github.com/napcs/8e640df0e8abfe047e6b8c048a14470e
+notifyme() {
+  if [ $? -eq 0 ]; then
+    osascript -e 'display notification "The command worked" with title "Success"'
+  else
+    osascript -e 'display notification "The command failed" with title "Failed"'
+  fi
 }
 
 alias hbr='proj; cd heroku-buildpack-ruby'
