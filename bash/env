@@ -2,7 +2,8 @@
 
 # which -a python
 
-export EDITOR="subl -w"
+export VISUAL="vim" # https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference
+export EDITOR="vim"
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:~/root/bin:$PATH"
 export GOPATH="$HOME/documents/projects/gohomecode"
 export PATH="$GOPATH/bin:$PATH"
