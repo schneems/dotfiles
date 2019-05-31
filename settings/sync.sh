@@ -19,6 +19,7 @@ git config --global alias.pushf "push --force-with-lease"
 
 git config --global push.default current
 git config --global credential.helper osxkeychain
+git config --global commit.cleanup scissors
 
 echo "== Settup git"
 echo "git config user.name"
