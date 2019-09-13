@@ -9,6 +9,7 @@ cask "java"
 cask "osxfuse"
 brew "automake"
 
+# brew "autojump"
 brew "tmux"
 brew "pkg-config"
 brew "imagemagick"

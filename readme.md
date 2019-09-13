@@ -27,6 +27,8 @@ if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi" >> ~/.bash_profile
 source ~/bin/dotfiles/bashrc
+
+echo "source ~/bin/dotfiles/vim/.vimrc" ~/.vimrc
 ```
 
 ```

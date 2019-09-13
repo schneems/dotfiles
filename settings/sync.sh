@@ -12,10 +12,14 @@ ln -s "~/Dropbox/shared_settings/iterm2/com.googlecode.iterm2.plist" ~/Library/P
 
 ## Git Aliases
 git config --global alias.co checkout
+git config --global alias.p push
 git config --global alias.br branch
 git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.pushf "push --force-with-lease"
+git config --global alias.a "add -p"
+git config --global alias.ro "pull --rebase origin master"
+git config --global alias.ru "pull --rebase upstream master"
 
 git config --global push.default current
 git config --global credential.helper osxkeychain
