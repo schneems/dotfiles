@@ -271,7 +271,6 @@ function! NERDTreeInitAsNeeded()
   endif
 endfunction
 
-autocmd Filetype gitcommit setlocal spell textwidth=72
 autocmd Filetype mail setlocal spell textwidth=72
 
 " When editing a file, always jump to the last known cursor position.
@@ -325,3 +324,7 @@ augroup Markdown
   autocmd FileType markdown set wrap
   hi link markdownError Normal
 augroup END
+
+" textwidth=0 prevents wrapping at an arbitrary 72 chars
+" wrap turns on soft wrap
+autocmd Filetype gitcommit setlocal spell textwidth=0 wrap
