@@ -2,6 +2,8 @@ alias asbot='~/Documents/projects/badger/bin/asbot'
 alias badger='~/Documents/projects/badger/bin/badger'
 alias gitx.='gitx .'
 
+alias prs='hub pr list -f "%au %H %U%n" | grep schneems | column -t'
+
 # notifyme
 function amdone {
   if [ $? -eq 0 ]
