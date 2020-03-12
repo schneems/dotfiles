@@ -191,18 +191,18 @@ set completeopt=menu,preview,longest
 set tags=./tags;/,~/.vimtags,./.git/tags
 
 " NerdTree {
-map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
-map <leader>e :NERDTreeFind<CR>
-nmap <leader>nt :NERDTreeFind<CR>
+" map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+" map <leader>e :NERDTreeFind<CR>
+" nmap <leader>nt :NERDTreeFind<CR>
 
-let NERDTreeShowBookmarks=1
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
-let NERDTreeChDirMode=0
-let NERDTreeQuitOnOpen=1
-let NERDTreeMouseMode=2
-let NERDTreeShowHidden=1
-let NERDTreeKeepTreeInNewTab=1
-let g:nerdtree_tabs_open_on_gui_startup=0
+" let NERDTreeShowBookmarks=1
+" let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+" let NERDTreeChDirMode=0
+" let NERDTreeQuitOnOpen=1
+" let NERDTreeMouseMode=2
+" let NERDTreeShowHidden=1
+" let NERDTreeKeepTreeInNewTab=1
+" let g:nerdtree_tabs_open_on_gui_startup=0
 " }
 
 " ctrlp {
@@ -259,17 +259,17 @@ function! InitializeDirectories()
 endfunction
 call InitializeDirectories()
 
-function! NERDTreeInitAsNeeded()
-  redir => bufoutput
-  buffers!
-  redir END
-  let idx = stridx(bufoutput, "NERD_tree")
-  if idx > -1
-    NERDTreeMirror
-    NERDTreeFind
-    wincmd l
-  endif
-endfunction
+" function! NERDTreeInitAsNeeded()
+"   redir => bufoutput
+"   buffers!
+"   redir END
+"   let idx = stridx(bufoutput, "NERD_tree")
+"   if idx > -1
+"     NERDTreeMirror
+"     NERDTreeFind
+"     wincmd l
+"   endif
+" endfunction
 
 autocmd Filetype mail setlocal spell textwidth=72
 
