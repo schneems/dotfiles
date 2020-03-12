@@ -1,6 +1,9 @@
 alias asbot='~/Documents/projects/badger/bin/asbot'
 alias badger='~/Documents/projects/badger/bin/badger'
 alias gitx.='gitx .'
+alias empty='git commit --allow-empty -m empty'
+
+alias subl='vim'
 
 alias prs='hub pr list -f "%au %H %U%n" | grep schneems | column -t'
 
@@ -15,7 +18,7 @@ function amdone {
 }
 
 # https://gist.github.com/napcs/8e640df0e8abfe047e6b8c048a14470e
-notifyme() {
+notify() {
   if [ $? -eq 0 ]; then
     osascript -e 'display notification "The command worked" with title "Success"'
   else
