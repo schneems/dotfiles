@@ -24,5 +24,5 @@ export CPPFLAGS=-I/opt/X11/include
 # rb-env
 # eval "$(rbenv init -)"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
-chruby 2.6 # $(chruby | tail -n 1 | sed s/*//) # grabs the latest installed ruby
+chruby 2.7 # $(chruby | tail -n 1 | sed s/*//) # grabs the latest installed ruby
 
