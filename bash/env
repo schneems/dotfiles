@@ -9,6 +9,7 @@ export GOPATH="$HOME/documents/projects/gohomecode"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH" # export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
 export QMAKE="/usr/local/opt/qt@5.5/bin/qmake" #"$(brew --prefix qt@5.5)/bin/qmake"
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # https://stackoverflow.com/questions/52671926/rails-may-have-been-in-progress-in-another-thread-when-fork-was-called
 
 export PATH=$PATH:/usr/local/opt/go/libexec/bi
 
