@@ -7,6 +7,19 @@ alias subl='vim'
 
 alias prs='hub pr list -f "%au %H %U%n" | grep schneems | column -t'
 
+
+function reproapp {
+  cd /tmp
+  dir_name=$(ruby -e "require 'securerandom'; puts SecureRandom.hex")
+  mkdir $dir_name
+  cd $dir_name
+  echo "source 'https://rubygems.org'" > Gemfile
+  bundle install
+  git init .
+  git add .
+  git commit -m first
+}
+
 # notifyme
 function amdone {
   if [ $? -eq 0 ]
