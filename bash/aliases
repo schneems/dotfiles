@@ -7,6 +7,9 @@ alias subl='vim'
 
 alias prs='hub pr list -f "%au %H %U%n" | grep schneems | column -t'
 
+function drun {
+  docker run -it --rm $1 bash
+}
 
 function reproapp {
   cd /tmp
