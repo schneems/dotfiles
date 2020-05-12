@@ -21,6 +21,7 @@ function reproapp {
   git init .
   git add .
   git commit -m first
+  heroku create
 }
 
 # notifyme
