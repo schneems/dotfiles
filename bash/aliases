@@ -2,6 +2,7 @@ alias asbot='~/Documents/projects/badger/bin/asbot'
 alias badger='~/Documents/projects/badger/bin/badger'
 alias gitx.='gitx .'
 alias empty='git commit --allow-empty -m empty'
+alias yeet='git push heroku master || git push heroku main'
 
 alias subl='vim'
 
@@ -9,6 +10,20 @@ alias prs='hub pr list -f "%au %H %U%n" | grep schneems | column -t'
 
 function drun {
   docker run -it --rm $1 bash
+}
+
+alias rbuildpack="heroku buildpacks:remove heroku/ruby; heroku buildpacks:add https://github.com/heroku/heroku-buildpack-ruby"
+
+function debugapp {
+  hs repo:clone -a $1
+  cd $1
+  git rrh
+  git co support
+  heroku create
+  heroku buildpacks:set https://github.com/ryandotsmith/null-buildpack
+  git push heroku support:master || git push heroku master || git push heroku main
+  heroku buildpacks:clear
+  empty
 }
 
 function reproapp {
