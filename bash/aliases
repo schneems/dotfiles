@@ -1,6 +1,7 @@
 alias asbot='~/Documents/projects/badger/bin/asbot'
 alias badger='~/Documents/projects/badger/bin/badger'
 alias gitx.='gitx .'
+alias vim.='vim .'
 alias empty='git commit --allow-empty -m empty'
 alias yeet='git push heroku master || git push heroku main'
 
