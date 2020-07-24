@@ -19,8 +19,8 @@ git config --global alias.st status
 git config --global alias.pushf "push --force-with-lease"
 git config --global alias.rrh "remote remove heroku"
 git config --global alias.a "add -p"
-git config --global alias.ro "pull --rebase origin master"
-git config --global alias.ru "pull --rebase upstream master"
+git config --global alias.ro "pull --rebase origin main"
+git config --global alias.ru "pull --rebase upstream main"
 git config --global alias.cam "commit —amend —reuse-message=@"
 
 git config --global push.default current
