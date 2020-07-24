@@ -33,6 +33,7 @@ function reproapp {
   mkdir $dir_name
   cd $dir_name
   echo "source 'https://rubygems.org'" > Gemfile
+  echo "gem 'rake'" >> Gemfile
   bundle install
   git init .
   git add .
