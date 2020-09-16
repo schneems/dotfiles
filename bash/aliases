@@ -35,11 +35,16 @@ function debugapp {
   empty
 }
 
-function reproapp {
+function mktmpdir {
   cd /tmp
   dir_name=$(ruby -e "require 'securerandom'; puts SecureRandom.hex")
   mkdir $dir_name
   cd $dir_name
+  echo "$ mkdir -p /tmp/$dir_name; cd /tmp/$dir_name"
+}
+
+function reproapp {
+  mktmpdir
   echo "source 'https://rubygems.org'" > Gemfile
   echo "gem 'rake'" >> Gemfile
   bundle install
