@@ -4,6 +4,7 @@ alias gitx.='gitx .'
 alias vim.='vim .'
 alias empty='git commit --allow-empty -m empty'
 alias yeet='git push heroku main || git push heroku master'
+alias utc='ruby -e "puts Time.now.utc"'
 
 function acab {
   if [ -x "$(git remote | grep upstream)" ]; then
