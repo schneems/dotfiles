@@ -102,6 +102,7 @@ alias wp='cd ~/Sites/public'
 alias hurl='name_tab hurl; proj; cd hurl; bundle exec shotgun config.ru'
 
 alias proj='cd ~/Documents/projects'
+alias work='cd ~/Documents/projects/work'
 
 alias hist='puts Readline::HISTORY.entries.split("exit").last[0..-2].join("\n")'
 
