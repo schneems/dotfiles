@@ -2,6 +2,7 @@
 
 # which -a python
 
+export HATCHET_EXPENSIVE_MODE=1
 export VISUAL="vim" # https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference
 export EDITOR="vim"
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:~/root/bin:$PATH"
