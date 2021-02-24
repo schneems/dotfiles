@@ -5,7 +5,7 @@
 export HATCHET_EXPENSIVE_MODE=1
 export VISUAL="vim" # https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference
 export EDITOR="vim"
-export PATH="/usr/local/bin:/usr/local/sbin:~/bin:~/root/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:~/root/bin:~/bin/dotfiles/bin/:$PATH"
 export GOPATH="$HOME/documents/projects/gohomecode"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH" # export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
@@ -26,5 +26,5 @@ export CPPFLAGS=-I/opt/X11/include
 # rb-env
 # eval "$(rbenv init -)"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
-chruby 2.7 # $(chruby | tail -n 1 | sed s/*//) # grabs the latest installed ruby
+chruby 3.0 # $(chruby | tail -n 1 | sed s/*//) # grabs the latest installed ruby
 

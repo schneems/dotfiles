@@ -328,3 +328,7 @@ augroup END
 " textwidth=0 prevents wrapping at an arbitrary 72 chars
 " wrap turns on soft wrap
 autocmd Filetype gitcommit setlocal spell textwidth=0 wrap
+
+" Allow vim to follow source files
+" https://github.com/vim-syntastic/syntastic/issues/1957
+let g:syntastic_sh_shellcheck_args="-x"

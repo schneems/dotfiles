@@ -6,6 +6,15 @@ alias empty='git commit --allow-empty -m empty'
 alias yeet='git push heroku main || git push heroku master'
 alias utc='TZ="UTC" date '
 
+alias fff="bundle exec rspec --only-failures"
+
+function sup
+{
+  echo 'require "objspace"; ObjectSpace.trace_object_allocations_start; Kernel.send(:define_method, :sup) do |obj| ;   puts "#{ ObjectSpace.allocation_sourcefile(obj) }:#{ ObjectSpace.allocation_sourceline(obj) }"; end' > /tmp/tmp-gemfile
+  cat Gemfile >> /tmp/tmp-gemfile
+  cat /tmp/tmp-gemfile > Gemfile
+}
+
 function acab {
   if [ -x "$(git remote | grep upstream)" ]; then
     git pull --rebase upstream main || git pull --rebase upstream master
@@ -78,7 +87,7 @@ alias hbr='proj; cd heroku-buildpack-ruby'
 alias h='heroku'
 alias be='bundle exec'
 alias b='bundle exec'
-alias dbundle='ruby -I ~/Documents/projects/bundler/lib ~/Documents/projects/bundler/exe/bundle'
+alias dbundle='ruby -I /Users/rschneeman/Documents/projects/rubygems/bundler/lib /Users/rschneeman/Documents/projects/rubygems/bundler/exe/bundle'
 
 function ruby_19_hash {
   find . -name $1 -exec perl -p -i -e 's/([^:]):(\w+)\s*=>/\1\2:/g' {} \;

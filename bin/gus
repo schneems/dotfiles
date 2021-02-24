@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+
+method="$1"
+
+if [[ "$GUS_COLUMN" == "" ]]; then
+  echo -e "ERROR: You need to set a GUS_COLUMN var."
+  echo -e "More info on configuring a Sprint Board here: https://salesforce.quip.com/8InvAKP3HI0p#FTOACAuPhoI"
+  exit 1
+elif [[ "$GUS_PRODUCT_TAG" == "" ]]; then
+  echo -e "ERROR: You need to set a GUS_PRODUCT_TAG var."
+  echo -e "More info on Product Tags here: https://salesforce.quip.com/8InvAKP3HI0p#FTOACAIgOHt"
+  exit 1
+fi
+
+create_bug() {
+  local subject="$1"
+  local priority="$2"
+  local description file
+
+  if grep -qE '^https://heroku.support/[[:digit:]]+$' <<< "$subject"; then
+    description="$subject"
+    subject="Support Ticket #$(sed 's/[^0-9]//g' <<< "$subject")"
+  else
+    file=$(mktemp)
+    vi "$file"
+    description=$(cat "$file")
+    rm "$file"
+  fi
+
+  sfdx force:data:record:create \
+    -v "Subject__c='${subject}' Details_and_Steps_to_Reproduce__c='${description}' Product_Tag__c='${GUS_PRODUCT_TAG}' RecordTypeId='012T00000004MUHIA2' Status__c='Ready' Column__c='${GUS_COLUMN}' Found_in_Build__c='a06T0000001Vew1IAC' Priority__c='${priority:-P4}'" \
+    -s ADM_Work__c
+}
+
+create_story() {
+  local subject="$1"
+  local description file
+
+  if grep -qE '^https://heroku.support/[[:digit:]]+$' <<< "$subject"; then
+    description="$subject"
+    subject="Support Ticket #$(sed 's/[^0-9]//g' <<< "$subject")"
+  else
+    file=$(mktemp)
+    vi "$file"
+    description=$(cat "$file")
+    rm "$file"
+  fi
+
+  sfdx force:data:record:create \
+    -v "Subject__c='${subject}' Details__c='${description}' Product_Tag__c='${GUS_PRODUCT_TAG}' RecordTypeId='0129000000006gDAAQ' Status__c='Ready' Column__c='${GUS_COLUMN}'" \
+    -s ADM_Work__c
+}
+
+read_item() {
+  local id="$1"
+  sfdx force:data:record:get -s ADM_Work__c -i "$id" --json
+}
+
+delete_item() {
+  local id="$1"
+  sfdx force:data:record:delete -s ADM_Work__c -i "$id"
+}
+
+case "$method" in
+  c | create)
+    echo -e "ERROR: Specify a Work type by using 'cb' for Bugs or 'cs' for User Stories"
+    ;;
+
+  cb | create_bug)
+    echo -e "Creating Bug..."
+    create_bug "$2" "$3"
+    ;;
+
+  cs | create_story)
+    echo -e "Creating User Story..."
+    create_story "$2"
+    ;;
+
+  r | read)
+    read_item "$2"
+    ;;
+
+  d | delete)
+    delete_item "$2"
+    ;;
+
+  *)
+    echo -e "ERROR: Please specify a CRUD operation."
+    ;;
+esac
