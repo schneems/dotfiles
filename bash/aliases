@@ -58,6 +58,7 @@ function reproapp {
   echo "source 'https://rubygems.org'" > Gemfile
   echo "gem 'rake'" >> Gemfile
   bundle install
+  bundle lock --add-platform x86_64-linux --add-platform ruby
   git init .
   git add .
   git commit -m first
