@@ -35,6 +35,7 @@ create_bug() {
 create_story() {
   local subject="$1"
   local description file
+  local card_status
 
   if grep -qE '^https://heroku.support/[[:digit:]]+$' <<< "$subject"; then
     description="$subject"
@@ -47,6 +48,8 @@ create_story() {
     description=$(cat "$file")
     rm "$file"
   fi
+
+  # Column__c
 
   sfdx force:data:record:create \
     -v "Subject__c='${subject}' Details__c='${description}' Product_Tag__c='${GUS_PRODUCT_TAG}' RecordTypeId='0129000000006gDAAQ' Status__c='${card_status}' Column__c='${GUS_COLUMN}'" \
