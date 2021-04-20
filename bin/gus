@@ -39,7 +39,9 @@ create_story() {
   if grep -qE '^https://heroku.support/[[:digit:]]+$' <<< "$subject"; then
     description="$subject"
     subject="Support Ticket #$(sed 's/[^0-9]//g' <<< "$subject")"
+    card_status="Closed"
   else
+    card_status="Ready"
     file=$(mktemp)
     vi "$file"
     description=$(cat "$file")
@@ -47,7 +49,7 @@ create_story() {
   fi
 
   sfdx force:data:record:create \
-    -v "Subject__c='${subject}' Details__c='${description}' Product_Tag__c='${GUS_PRODUCT_TAG}' RecordTypeId='0129000000006gDAAQ' Status__c='Ready' Column__c='${GUS_COLUMN}'" \
+    -v "Subject__c='${subject}' Details__c='${description}' Product_Tag__c='${GUS_PRODUCT_TAG}' RecordTypeId='0129000000006gDAAQ' Status__c='${card_status}' Column__c='${GUS_COLUMN}'" \
     -s ADM_Work__c
 }
 
