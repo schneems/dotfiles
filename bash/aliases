@@ -1,5 +1,5 @@
 function fast() {
-  bundle exec rspec --tag ~slow $@ && bundle exec rspec --tag slow $@
+  bundle exec rspec --tag \~slow $@ && bundle exec rspec --tag slow $@
 }
 alias asbot='~/Documents/projects/badger/bin/asbot'
 alias badger='~/Documents/projects/badger/bin/badger'
