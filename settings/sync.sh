@@ -22,6 +22,7 @@ git config --global alias.a "add -p"
 git config --global alias.ro "pull --rebase origin main"
 git config --global alias.ru "pull --rebase upstream main"
 git config --global alias.cam "commit —amend —reuse-message=@"
+git config --global alias.git '!git' # allow `git git status`
 
 git config --global push.default current
 git config --global credential.helper osxkeychain
