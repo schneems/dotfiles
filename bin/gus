@@ -28,7 +28,7 @@ create_bug() {
   fi
 
   sfdx force:data:record:create \
-    -v "Subject__c='${subject}' Details_and_Steps_to_Reproduce__c='${description}' Product_Tag__c='${GUS_PRODUCT_TAG}' RecordTypeId='012T00000004MUHIA2' Status__c='Ready' Column__c='${GUS_COLUMN}' Found_in_Build__c='a06T0000001Vew1IAC' Priority__c='${priority:-P4}'" \
+    -v "Subject__c='${subject}' Details_and_Steps_to_Reproduce__c='${description}' Product_Tag__c='${GUS_PRODUCT_TAG}' RecordTypeId='012T00000004MUHIA2' Status__c='Triaged' Column__c='${GUS_COLUMN}' Found_in_Build__c='a06T0000001Vew1IAC' Priority__c='${priority:-P4}'" \
     -s ADM_Work__c
 }
 
@@ -42,7 +42,7 @@ create_story() {
     subject="Support Ticket #$(sed 's/[^0-9]//g' <<< "$subject")"
     card_status="Closed"
   else
-    card_status="Ready"
+    card_status="Triaged"
     file=$(mktemp)
     vi "$file"
     description=$(cat "$file")
