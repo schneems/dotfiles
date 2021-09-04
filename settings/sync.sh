@@ -1,7 +1,7 @@
-## Sublime text
-cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
-rm -r User
-ln -s ~/Dropbox/Sublime/User
+# ## Sublime text
+# cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+# rm -r User
+# ln -s ~/Dropbox/Sublime/User
 
 ## Iterm2
 ln -s "~/Dropbox/shared_settings/iterm2/com.googlecode.iterm2.plist" ~/Library/Preferences/com.googlecode.iterm2.plist

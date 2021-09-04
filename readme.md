@@ -8,7 +8,7 @@ These are my dotfiles. There are many like them, but these dotfiles are mine.
 
 ## Install
 
-You need homebrew installed first.
+You need homebrew installed first [install homebrew](https://brew.sh/).
 
 ```
 mkdir ~/bin
@@ -22,13 +22,14 @@ brew bundle
 touch ~/.bashrc
 echo "source ~/bin/dotfiles/bashrc" >> ~/.bashrc
 touch ~/.bash_profile # Link bashrc to bashprofile
-echo "
+cat > ~/.bash_profile << EOF
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
-fi" >> ~/.bash_profile
+fi
+EOF
 source ~/bin/dotfiles/bashrc
 
-echo "source ~/bin/dotfiles/vim/.vimrc" ~/.vimrc
+echo "source ~/bin/dotfiles/vim/.vimrc" > ~/.vimrc
 ```
 
 ```
@@ -36,13 +37,15 @@ source osx/hacks
 source settings/sync.sh
 ```
 
+```
+vim +PluginInstall +qall
+```
+
 ## Extras
 
 - System preferences search "'default web browser"
-- Install package control
 - `ruby-install ruby` versions
 - gitx https://rowanj.github.io/gitx/
-
 - Setup github [via token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
 
 

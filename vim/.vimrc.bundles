@@ -7,15 +7,15 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 " Deps
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/vundle'
 Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
+" Plugin 'tomtom/tlib_vim'
 
 " General
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'majutsushi/tagbar'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'matchit.zip'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
@@ -27,7 +27,7 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
-Plugin 'calebthompson/vim-whitewash'
+" Plugin 'calebthompson/vim-whitewash' "Breaks saving bash files with tabs :(
 Plugin 'jayferd/ragel.vim'
 Plugin 'tpope/vim-projectile'
 Plugin 'tpope/vim-commentary'
@@ -35,7 +35,6 @@ Plugin 'tpope/vim-commentary'
 " Javascript
 Plugin 'leshill/vim-json'
 Plugin 'tpope/vim-jdaddy'
-"Plugin 'pangloss/vim-javascript'
 Plugin 'nono/vim-handlebars'
 
 " HTML
@@ -45,7 +44,6 @@ Plugin 'slim-template/vim-slim'
 " Ruby
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
-Plugin 'thoughtbot/vim-rspec'
 Plugin 'rking/vim-detailed'
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
@@ -54,11 +52,7 @@ Plugin 'fatih/vim-go'
 
 " Misc
 " Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-cucumber'
-Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-heroku'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-eunuch'
@@ -74,4 +68,3 @@ Plugin 'joker1007/vim-ruby-heredoc-syntax'
 let g:hardtime_default_on = 1
 let g:hardtime_showmsg = 1
 
-"Plugin 'stefanoverna/vim-i18n'
