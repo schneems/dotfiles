@@ -27,10 +27,13 @@ if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 EOF
-source ~/bin/dotfiles/bashrc
-
+echo "source ~/bin/dotfiles/bashrc" >> ~/.zshrc
 echo "source ~/bin/dotfiles/vim/.vimrc" > ~/.vimrc
+
+source ~/bin/dotfiles/bashrc
 ```
+
+- Setup caps lock to ctrl+escape - https://github.com/jasonrudolph/ControlEscape.spoon
 
 ```
 source osx/hacks

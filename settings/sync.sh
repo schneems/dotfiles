@@ -3,6 +3,9 @@
 # rm -r User
 # ln -s ~/Dropbox/Sublime/User
 
+# Make folder structure
+mkdir -p ~/Documents/projects/work
+
 ## Iterm2
 ln -s "~/Dropbox/shared_settings/iterm2/com.googlecode.iterm2.plist" ~/Library/Preferences/com.googlecode.iterm2.plist
 
