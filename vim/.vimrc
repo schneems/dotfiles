@@ -4,8 +4,8 @@ set nocompatible        " must be first line
 let g:Powerline_symbols = 'fancy'
 
 " Bundles
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+if filereadable(expand("~/bin/dotfiles/vim/.vimrc.bundles"))
+  source ~/bin/dotfiles/vim/.vimrc.bundles
 endif
 
 if has ("unix") && "Darwin" != system("echo -n \"$(uname)\"")
@@ -207,13 +207,23 @@ set tags=./tags;/,~/.vimtags,./.git/tags
 
 " ctrlp {
 let g:ctrlp_working_path_mode = 2
-let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-      \ 'file': '\.exe$\|\.so$\|\.dll$' }
 
-"Configure ctrlp for SPEED
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 700
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_use_caching=1000
+
+ "
+ ""Configure ctrlp for SPEED
+ "let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+ "let g:ctrlp_use_caching = 700
+ "
+ "if executable("ag")
+ "  set grepprg=ag\ --nogroup\ --nocolor
+ "  let g:ctrlp_user_command="ag %s -l --nocolor -g ''"
+ "  let g:ctrlp_use_caching=1000
+ "elseif executable("git")
+ "  set grepprg=git\ grep
+ "end
+let g:ctrlp_show_hidden = 1
 
 " indent_guides
 let g:indent_guides_auto_colors = 1
@@ -281,13 +291,6 @@ autocmd BufReadPost *
   \   exe "normal g`\"" |
   \ endif
 
-if executable("ag")
-  set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command="ag %s -l --nocolor -g ''"
-  let g:ctrlp_use_caching=1000
-elseif executable("git")
-  set grepprg=git\ grep
-end
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>

@@ -58,3 +58,6 @@ echo "setting up text editors"
 echo "setting up bundler"
 gem install bundler
 bundle config --global jobs $(sysctl -n hw.ncpu)
+
+echo "ag ignore"
+echo ".git/" >> ~/.agignore
