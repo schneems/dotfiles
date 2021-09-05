@@ -30,21 +30,39 @@ git config --global alias.git '!git' # allow `git git status`
 git config --global push.default current
 git config --global credential.helper osxkeychain
 git config --global commit.cleanup scissors
+git config --global init.defaultBranch main
 
 echo "== Settup git"
 echo "git config user.name"
-echo "> "
-read user_name
+echo -n "> "
+read -r user_name
 git config --global user.name "$user_name"
 echo "Set to: $(git config --global user.name)"
 echo ""
 
 echo "git config user.email"
-echo "> "
-read user_email
+echo -n "> "
+read -r user_email
 git config --global user.email "$user_email"
 echo "Set to: $(git config --global user.email)"
 echo ""
+
+echo "git config work email"
+echo -n "> "
+read -r work_email
+
+if [ -n "$work_email" ]; then
+  cat >> ~/.gitconfig << EOF
+[includeIf "gitdir:~/Documents/projects/work/"]
+  path = ~/.work.gitconfig
+EOF
+
+  cat > ~/.work.gitconfig << EOF
+[user]
+  name = Richard Schneeman
+  email = $work_email
+EOF
+fi
 
 echo "setting up heroku"
 heroku autocomplete
