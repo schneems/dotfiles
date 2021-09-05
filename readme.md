@@ -33,7 +33,10 @@ echo "source ~/bin/dotfiles/vim/.vimrc" > ~/.vimrc
 source ~/bin/dotfiles/bashrc
 ```
 
+- Set up iterm to use saved preferences from folder (Preferences -> General -> preferences point to dotfiles/config/iterm folder)
 - Setup caps lock to ctrl+escape - https://github.com/jasonrudolph/ControlEscape.spoon
+- Login 1password
+- Login dropbox && install fonts
 
 ```
 source osx/hacks
