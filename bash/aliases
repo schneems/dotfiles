@@ -1,3 +1,5 @@
+alias rake='noglob rake' # www.mikeballou.com/blog/2011/07/18/zsh-and-rake-parameters/, https://github.com/ohmyzsh/ohmyzsh/issues/433
+
 function ij() {
         local args="$@"
         if [[ $# == 0 ]]; then
