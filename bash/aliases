@@ -9,7 +9,7 @@ function ij() {
                 args="$(pwd)/${1}"
         fi
 
-        open -na "IntelliJ IDEA.app" --args "$args"
+        open -na "IntelliJ IDEA CE.app" --args "$args"
 }
 
 
