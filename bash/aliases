@@ -12,6 +12,11 @@ function ij() {
         open -na "IntelliJ IDEA CE.app" --args "$args"
 }
 
+# Copies last command from history, excluding itself
+function hh() {
+  history | grep -v "hh" | tail -1 | head -1 | cut -c8-999 | pbcopy; echo "Copied: $(pbpaste)"
+}
+
 
 function fast() {
   bundle exec rspec --tag \~slow $@ && bundle exec rspec --tag slow $@
