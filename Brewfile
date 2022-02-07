@@ -25,14 +25,14 @@ brew "glib"
 brew "pkg-config"
 brew "chruby"
 brew "circleci"
+brew "rtmpdump"
+brew "libtool"
+brew "krb5"
 brew "composer"
 brew "coreutils"
-brew "libyaml"
 brew "docker-compose", link: false
 brew "openjdk"
 brew "epubcheck"
-brew "libtool"
-brew "nghttp2"
 brew "unbound"
 brew "gobject-introspection"
 brew "harfbuzz"
@@ -56,14 +56,15 @@ brew "libheif"
 brew "imagemagick"
 brew "imagemagick@6"
 brew "jq"
-brew "krb5"
 brew "libxml2"
+brew "libyaml"
 brew "mas"
 brew "memcached", restart_service: true
 brew "mitmproxy"
 brew "mvnvm"
 brew "mysql", restart_service: true
 brew "netcat"
+brew "nghttp2"
 brew "node"
 brew "openjdk@11"
 brew "pandoc"
@@ -76,7 +77,6 @@ brew "python@3.8"
 brew "ragel"
 brew "rbspy"
 brew "redis", restart_service: true
-brew "rtmpdump"
 brew "ruby-install"
 brew "s3cmd"
 brew "shellcheck"
@@ -96,7 +96,6 @@ brew "buildpacks/tap/pack"
 brew "filosottile/musl-cross/musl-cross"
 brew "heroku/brew/heroku"
 cask "1password"
-cask "adoptopenjdk14"
 cask "caffeine"
 cask "calibre"
 cask "chromedriver"
@@ -110,6 +109,7 @@ cask "iterm2"
 cask "screenflow"
 cask "spotify"
 cask "sublime-text"
+cask "unnaturalscrollwheels"
 cask "visual-studio-code"
 cask "vlc"
 cask "wkhtmltopdf"
@@ -118,10 +118,13 @@ mas "Alfred", id: 405843582
 mas "BetterSnapTool", id: 417375580
 mas "Classic Color Meter", id: 451640037
 mas "Evernote", id: 406056744
+mas "GarageBand", id: 682658836
 mas "Grammarly for Safari", id: 1462114288
+mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "LastPass", id: 926036361
+mas "Magnet", id: 441258766
 mas "MenubarClock", id: 492167985
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
