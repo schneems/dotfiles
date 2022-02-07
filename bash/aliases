@@ -16,7 +16,7 @@ function ij() {
 function hh() {
   history | grep -v "hh" | tail -1 | head -1 | cut -c8-999 | pbcopy; echo "Copied: $(pbpaste)"
 }
-
+alias hs='heroku sudo'
 
 function fast() {
   bundle exec rspec --tag \~slow $@ && bundle exec rspec --tag slow $@
