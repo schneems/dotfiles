@@ -27,6 +27,9 @@ git config --global alias.ru "pull --rebase upstream main"
 git config --global alias.cam "commit —amend —reuse-message=@"
 git config --global alias.git '!git' # allow `git git status`
 
+# List branches by date
+git config --global alias.branchd "for-each-ref --sort=committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'"
+
 git config --global push.default current
 git config --global credential.helper osxkeychain
 git config --global commit.cleanup scissors
