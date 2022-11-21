@@ -5,7 +5,7 @@ function pip() {
 }
 alias rake='noglob rake' # www.mikeballou.com/blog/2011/07/18/zsh-and-rake-parameters/, https://github.com/ohmyzsh/ohmyzsh/issues/433
 
-alias rofl='set -x;cargo fmt -- --check --verbose && cargo clippy --all-targets --all-features --locked -- --deny warnings && RUST_BACKTRACE=1 cargo test --all-features --locked -- --include-ignored;set +x;'
+alias rofl='set -x; cargo fmt && cargo clippy --all-targets && RUST_BACKTRACE=1 cargo test -- --include-ignored; set +x;'
 
 function ij() {
         local args="$@"
