@@ -27,7 +27,7 @@ local ruby_version='$RUBY_VERSION'
 local current_dir='$PWD'
 local git='${vcs_info_msg_0_}'
 
-local bright_blue="033" # https://unix.stackexchange.com/questions/124407/what-color-codes-can-i-use-in-my-ps1-prompt/124409#124409 
+local bright_blue="033" # https://unix.stackexchange.com/questions/124407/what-color-codes-can-i-use-in-my-ps1-prompt/124409#124409
 # display <chruby version> <pwd> (git_branch)
 # $
 export PROMPT="⛄️ %F{$bright_blue}${ruby_version}%F{none} 🚀 ${current_dir} %F{red}${git}%F{none}"$'\n'"\$ "
