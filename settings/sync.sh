@@ -67,6 +67,9 @@ EOF
 EOF
 fi
 
+echo "Obsidian vimrc"
+ln -s "$HOME/bin/dotfiles/vim/.obsidian.vimrc" "$HOME/Documents/Obsidian Vault/.obsidian.vimrc"
+
 echo "setting up heroku"
 heroku autocomplete
 
@@ -74,7 +77,6 @@ heroku autocomplete
 echo "setting up text editors"
 # ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 # ln -s "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ~/bin/code
-
 
 echo "setting up bundler"
 gem install bundler
