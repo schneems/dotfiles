@@ -12,9 +12,11 @@ alias rake='noglob rake' # www.mikeballou.com/blog/2011/07/18/zsh-and-rake-param
 
 function rofl() {
   CMDS=(cargo\ build)
-  CMDS+=("cargo fmt -- --check")
+  CMDS+=("cargo fmt")
   CMDS+=("cargo clippy --all-targets --locked -- --deny warnings")
   CMDS+=("cargo test --locked -- --ignored")
+  CMDS+=("git status")
+  CMDS+=("git status --porcelain")
 
   # Advertize all commands
   echo "## All commands"
