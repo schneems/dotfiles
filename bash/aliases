@@ -10,7 +10,30 @@ function pip() {
 }
 alias rake='noglob rake' # www.mikeballou.com/blog/2011/07/18/zsh-and-rake-parameters/, https://github.com/ohmyzsh/ohmyzsh/issues/433
 
-alias rofl='set -x; cargo fmt && cargo clippy --all-targets && RUST_BACKTRACE=1 cargo test -- --include-ignored; set +x;'
+function rofl() {
+  CMDS=(cargo\ build)
+  CMDS+=("cargo fmt -- --check")
+  CMDS+=("cargo clippy --all-targets --locked -- --deny warnings")
+  CMDS+=("cargo test --locked -- --ignored")
+
+  # Advertize all commands
+  echo "## All commands"
+  echo
+  for value in "${CMDS[@]}"
+  do
+    echo "\$ $value"
+  done
+  echo
+
+  echo "## Running"
+  echo
+  for value in "${CMDS[@]}"
+  do
+    echo "\$ $value"
+    eval "$value" || return 1
+    echo
+  done
+}
 
 function ij() {
         local args="$@"
