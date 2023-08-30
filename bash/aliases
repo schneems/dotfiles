@@ -10,15 +10,31 @@ function pip() {
 }
 alias rake='noglob rake' # www.mikeballou.com/blog/2011/07/18/zsh-and-rake-parameters/, https://github.com/ohmyzsh/ohmyzsh/issues/433
 
+function dockboot() {
+  APP="/Applications/Docker.app"
+  if docker version &> /dev/null; then
+    echo "Docker is booted"
+  else
+    echo "Booting docker"
+    open $APP || { echo "Failed"; return 1 }
+    while ! docker version &> /dev/null
+    do
+        printf "."
+        sleep 1
+    done
+    echo "Docker is booted"
+  fi
+}
+
 function rofl() {
   CMDS=(cargo\ build)
   CMDS+=("cargo fmt")
   CMDS+=("cargo clippy --all-targets --locked -- --deny warnings")
-  CMDS+=("cargo test --locked -- --ignored")
+  CMDS+=("dockboot")
+  CMDS+=("time cargo test --locked -- --ignored")
   CMDS+=("git status")
   CMDS+=("git status --porcelain")
 
-  # Advertize all commands
   echo "## All commands"
   echo
   for value in "${CMDS[@]}"
