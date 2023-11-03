@@ -9,17 +9,18 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write com.apple.Finder AppleShowAllFiles YES
 killall Finder
 
-# disable mute while typing google hangouts
-defaults write com.google.googletalkplugind exps -string [\"-tm\"]
-
 # Speed up key repeat
-defaults write -g InitialKeyRepeat -int 13 # normal minimum is 15 (225 ms)
-defaults write -g KeyRepeat -int 2 # normal minimum is 2 (30 ms)
+# normal minimum is 15 (225 ms)
+defaults write -g InitialKeyRepeat -int 13 
+# normal minimum is 2 (30 ms)
+defaults write -g KeyRepeat -int 2 
 
 # Position Dock
 defaults write com.apple.Dock orientation -string left
 defaults write com.apple.Dock autohide -bool TRUE
-killall Dock # force setting to take affect
+
+# force setting to take affect
+killall Dock 
 
 # Disable smart quotes
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false

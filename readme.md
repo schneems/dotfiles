@@ -8,7 +8,8 @@ These are my dotfiles. There are many like them, but these dotfiles are mine.
 
 ## Install
 
-You need homebrew installed first [install homebrew](https://brew.sh/).
+- You need homebrew installed first [Install homebrew](https://brew.sh/).
+- [Install rust](https://www.rust-lang.org/tools/install)
 
 ```
 mkdir ~/bin

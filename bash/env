@@ -19,8 +19,14 @@ export DISABLE_SPRING="true"
 # Set PATH, CDPATH, EDITOR, etc.
 export CPPFLAGS=-I/opt/X11/include
 
-# rb-env
-# eval "$(rbenv init -)"
-source /usr/local/share/chruby/chruby.sh
-chruby 3.1 # $(chruby | tail -n 1 | sed s/*//) # grabs the latest installed ruby
+if test -f /usr/local/share/chruby/chruby.sh; then
+  source /usr/local/share/chruby/chruby.sh
+elif test -f /opt/homebrew/opt/chruby/share/chruby/chruby.sh; then
+  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+else
+  echo "Cannot source chruby"
+fi
+
+chruby 3.1
+# ruby-install 3.1.4 -- --with-openssl-dir=$(brew --prefix openssl@3)
 

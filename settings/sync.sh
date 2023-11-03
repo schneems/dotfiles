@@ -6,12 +6,7 @@
 # Make folder structure
 mkdir -p ~/Documents/projects/work
 
-## Iterm2
-ln -s "~/Dropbox/shared_settings/iterm2/com.googlecode.iterm2.plist" ~/Library/Preferences/com.googlecode.iterm2.plist
-
 ## Project folder
-# echo "Set up project folder"
-# ln -s ~/Dropbox/projects ~/Documents/projects
 
 ## Git Aliases
 git config --global alias.co checkout
@@ -25,7 +20,9 @@ git config --global alias.a "add -p"
 git config --global alias.ro "pull --rebase origin main"
 git config --global alias.ru "pull --rebase upstream main"
 git config --global alias.cam "commit —amend —reuse-message=@"
-git config --global alias.git '!git' # allow `git git status`
+
+# allow `git git status`
+git config --global alias.git '!git'
 
 # List branches by date
 git config --global alias.branchd "for-each-ref --sort=committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'"
