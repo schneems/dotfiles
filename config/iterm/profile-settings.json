@@ -1,11 +1,5 @@
 {
-  "Link Color" : {
-    "Red Component" : 0.19802422821521759,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.9337158203125,
-    "Alpha Component" : 1,
-    "Green Component" : 0.55789834260940552
-  },
+  "Guid" : "C42AB521-9BCE-4C4D-9754-BEE06518114D",
   "Tags" : [
 
   ],
@@ -16,6 +10,13 @@
     "Alpha Component" : 1,
     "Green Component" : 0.67044717073440552
   },
+  "Link Color" : {
+    "Red Component" : 0.19802422821521759,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.9337158203125,
+    "Alpha Component" : 1,
+    "Green Component" : 0.55789834260940552
+  },
   "Ansi 7 Color" : {
     "Red Component" : 0.7810397744178772,
     "Color Space" : "sRGB",
@@ -23,19 +24,19 @@
     "Alpha Component" : 1,
     "Green Component" : 0.78105825185775757
   },
-  "Ansi 8 Color" : {
-    "Red Component" : 0.40781760215759277,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.4078223705291748,
-    "Alpha Component" : 1,
-    "Green Component" : 0.40782788395881653
-  },
   "Bold Color" : {
     "Red Component" : 0.99999600648880005,
     "Color Space" : "sRGB",
     "Blue Component" : 1,
     "Alpha Component" : 1,
     "Green Component" : 1
+  },
+  "Ansi 8 Color" : {
+    "Red Component" : 0.40781760215759277,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.4078223705291748,
+    "Alpha Component" : 1,
+    "Green Component" : 0.40782788395881653
   },
   "Ansi 9 Color" : {
     "Red Component" : 0.8659515380859375,
@@ -45,9 +46,9 @@
     "Green Component" : 0.47524076700210571
   },
   "Horizontal Spacing" : 1,
-  "Right Option Key Sends" : 0,
   "Rows" : 25,
   "Default Bookmark" : "No",
+  "Right Option Key Sends" : 0,
   "Cursor Guide Color" : {
     "Red Component" : 0.70213186740875244,
     "Color Space" : "sRGB",
@@ -85,6 +86,9 @@
     "Alpha Component" : 1,
     "Green Component" : 0.86199951171875
   },
+  "Bound Hosts" : [
+
+  ],
   "Working Directory" : "\/Users\/rschneeman\/Documents\/projects",
   "Blinking Cursor" : false,
   "Disable Window Resizing" : true,
@@ -328,7 +332,7 @@
     "Green Component" : 0.99263292551040649
   },
   "ASCII Ligatures" : false,
-  "Name" : "Default",
+  "Name" : "Schneems",
   "Cursor Text Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
@@ -381,6 +385,8 @@
     "Green Component" : 0.24931684136390686
   },
   "Use Non-ASCII Font" : true,
+  "Has Hotkey" : false,
+  "Normal Font" : "DMMono-Regular 17",
   "Ansi 6 Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
@@ -388,7 +394,6 @@
     "Alpha Component" : 1,
     "Green Component" : 0.77425903081893921
   },
-  "Normal Font" : "DMMono-Regular 17",
   "Custom Directory" : "Recycle",
   "Ansi 0 Color" : {
     "Red Component" : 0.078431375324726105,
@@ -396,6 +401,5 @@
     "Blue Component" : 0.11764705926179886,
     "Alpha Component" : 1,
     "Green Component" : 0.098039217293262482
-  },
-  "Guid" : "7D413272-31AC-417C-9843-0D71E6C114C2"
+  }
 }
