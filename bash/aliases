@@ -34,7 +34,7 @@ function dockwait() {
 function rofl() {
   CMDS=(dockboot)
   CMDS+=("cargo fmt")
-  CMDS+=("cargo clippy --all-targets -- --deny warnings")
+  CMDS+=("cargo clippy --all-targets --all-features -- --deny warnings")
   CMDS+=("dockwait")
   CMDS+=("time cargo test -- --ignored")
   CMDS+=("git status")
