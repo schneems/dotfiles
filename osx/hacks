@@ -11,16 +11,16 @@ killall Finder
 
 # Speed up key repeat
 # normal minimum is 15 (225 ms)
-defaults write -g InitialKeyRepeat -int 13 
+defaults write -g InitialKeyRepeat -int 13
 # normal minimum is 2 (30 ms)
-defaults write -g KeyRepeat -int 2 
+defaults write -g KeyRepeat -int 2
 
 # Position Dock
 defaults write com.apple.Dock orientation -string left
 defaults write com.apple.Dock autohide -bool TRUE
 
 # force setting to take affect
-killall Dock 
+killall Dock
 
 # Disable smart quotes
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
@@ -30,3 +30,6 @@ defaults write com.apple.TextEdit SmartDashes -bool false
 
 # Disable 'Add period with double space', requires a computer restart to take effect
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# Dark mode
+sudo defaults write /Library/Preferences/.GlobalPreferences.plist _HIEnableThemeSwitchHotKey -bool true
