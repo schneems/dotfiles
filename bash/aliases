@@ -6,6 +6,29 @@ alias "cw"="bacon test"
 alias "cwc"="cargo watch -c -x ltest -x clippy"
 alias "cwstd"=" cargo watch -c --shell "./x.py test library/std""
 alias "jup"="jupyter notebook --browser any"
+
+function hellopuma {
+    mktmpdir
+    cat <<EOF > Gemfile
+source "https://rubygems.org"
+
+gem "puma"
+gem "rack"
+EOF
+cat <<EOF > config.ru
+require 'rack'
+
+response = ['200', {'Content-Type' => 'text/html'}, ['Hello, World!']]
+app = Proc.new do |env|
+  sleep 0.2
+  response
+end
+
+run app
+EOF
+bundle install
+}
+
 function pip() {
   echo "use pip3 instead"
 }
