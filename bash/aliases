@@ -7,6 +7,17 @@ alias "cwc"="cargo watch -c -x ltest -x clippy"
 alias "cwstd"=" cargo watch -c --shell "./x.py test library/std""
 alias "jup"="jupyter notebook --browser any"
 
+# Toggle between custom prompt on/off for the purposes of copy/paste
+function demo {
+  if [ -z "$OLDPROMPT" ]; then
+    export OLDPROMPT="$PROMPT"
+    export PROMPT="\$ "
+  else
+    export PROMPT="$OLDPROMPT"
+    unset OLDPROMPT
+  fi
+}
+
 function hellopuma {
     mktmpdir
     cat <<EOF > Gemfile
