@@ -32,6 +32,6 @@ else
   echo "Cannot source chruby"
 fi
 
-chruby 3.1
-# ruby-install 3.1.4 -- --with-openssl-dir=$(brew --prefix openssl@3)
+chruby 3.4
+
 
