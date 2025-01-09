@@ -34,4 +34,13 @@ fi
 
 chruby 3.4
 
+# export PYENV_ROOT="$HOME/.pyenv"
+# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+pyenv global 3.13
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+# jenv add /Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home
+# jenv global zulu64-17.0.13
 
