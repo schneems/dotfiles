@@ -64,6 +64,10 @@ EOF
 EOF
 fi
 
+echo "setting up global .gitignore"
+echo .DS_Store >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+
 echo "Obsidian vimrc"
 ln -s "$HOME/bin/dotfiles/vim/.obsidian.vimrc" "$HOME/Documents/Obsidian Vault/.obsidian.vimrc"
 
