@@ -149,6 +149,7 @@ function drun {
 alias rbuildpack="heroku buildpacks:remove heroku/ruby; heroku buildpacks:add https://github.com/heroku/heroku-buildpack-ruby"
 
 function debugapp {
+  mktmpdir
   hs repo:clone -a $1
   cd $1
   git rrh
