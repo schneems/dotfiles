@@ -7,24 +7,42 @@ alias "docknuke"="docker system prune --all --volumes --force && docker volume p
 alias "cw"="bacon test"
 alias "exa"="lsd"
 
-function pbash {
+function dockcheck {
   local imagename="$1"
 
   # Check if imagename is still empty
   if [ -z "$imagename" ]; then
-    echo "No image name given. Available images:"
-    docker images --format table
+    echo "No image name given. Available images:" >&2
+    docker images --format table >&2
     return 1
   fi
-
-  # Construct and execute the docker command
-  echo "\$ docker run -it --rm --entrypoint='/cnb/lifecycle/launcher' $imagename bash"
-  docker run -it --rm --entrypoint='/cnb/lifecycle/launcher' "$imagename" bash || {
-    echo "No such image found: '$imagename'. Available images:"
-    echo ""
-    docker images --format table
+  if [ -z "$(docker images -q $imagename 2> /dev/null)" ]; then
+    echo "No such image found: '$imagename'. Available images:" >&2
+    echo "" >&2
+    docker images --format table >&2
     return 1
-  }
+  else
+    return 0
+  fi
+}
+
+# Non-interactive default web process from pack image
+function pboot {
+  local imagename="$1"
+  if $(dockcheck "$imagename"); then
+    echo "docker run -it --rm --env PORT=5006 -p 5006:5006 $imagename"
+    docker run -it --rm --env PORT=5006 -p 5006:5006 $imagename
+  fi
+}
+
+# Interactive "docker run ... bash" for pack images
+function pbash {
+  local imagename="$1"
+  if $(dockcheck "$imagename"); then
+    # Construct and execute the docker command
+    echo "\$ docker run -it --rm --entrypoint='/cnb/lifecycle/launcher' $imagename bash"
+    docker run -it --rm --entrypoint='/cnb/lifecycle/launcher' "$imagename" bash
+  fi
 }
 
 # Toggle between custom prompt on/off for the purposes of copy/paste
