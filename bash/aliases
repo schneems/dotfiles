@@ -1,6 +1,8 @@
 # Use `cargo doc --check` when stabalized: https://github.com/rust-lang/cargo/issues/10025
 alias "doc"='RUSTDOCFLAGS="-D warnings" cargo doc --all-features --document-private-items --no-deps'
 
+alias "docknuke"="docker system prune --all --volumes --force && docker volume prune --all --force"
+
 # Uses cargo limit https://github.com/alopatindev/cargo-limit
 alias "cw"="bacon test"
 alias "cwc"="cargo watch -c -x ltest -x clippy"
