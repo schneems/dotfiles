@@ -5,9 +5,6 @@ alias "docknuke"="docker system prune --all --volumes --force && docker volume p
 
 # Uses cargo limit https://github.com/alopatindev/cargo-limit
 alias "cw"="bacon test"
-alias "cwc"="cargo watch -c -x ltest -x clippy"
-alias "cwstd"=" cargo watch -c --shell "./x.py test library/std""
-alias "jup"="jupyter notebook --browser any"
 
 function pbash {
   local imagename="$1"
