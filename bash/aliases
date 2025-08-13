@@ -5,6 +5,7 @@ alias "docknuke"="docker system prune --all --volumes --force && docker volume p
 
 # Uses cargo limit https://github.com/alopatindev/cargo-limit
 alias "cw"="bacon test"
+alias "exa"="lsd"
 
 function pbash {
   local imagename="$1"
