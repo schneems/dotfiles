@@ -5,7 +5,7 @@
 export HATCHET_EXPENSIVE_MODE=1
 export VISUAL="vim" # https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference
 export EDITOR="vim"
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin/dotfiles/bin/:$PATH"
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin/dotfiles/bin/:$PATH"
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # https://stackoverflow.com/questions/52671926/rails-may-have-been-in-progress-in-another-thread-when-fork-was-called
 
 export MAKEFLAGS="$MAKEFLAGS --jobs $(sysctl -n hw.ncpu)"
@@ -24,23 +24,4 @@ export DISABLE_SPRING="true"
 # Set PATH, CDPATH, EDITOR, etc.
 export CPPFLAGS=-I/opt/X11/include
 
-if test -f /usr/local/share/chruby/chruby.sh; then
-  source /usr/local/share/chruby/chruby.sh
-elif test -f /opt/homebrew/opt/chruby/share/chruby/chruby.sh; then
-  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-else
-  echo "Cannot source chruby"
-fi
-
-chruby 3.4
-
-# export PYENV_ROOT="$HOME/.pyenv"
-# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-pyenv global 3.13
-
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-# jenv add /Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home
-# jenv global zulu64-17.0.13
-
+eval "$(mise activate zsh)"
