@@ -15,7 +15,10 @@ fi
 # Zsh Prompt
 # Load version control information
 autoload -Uz vcs_info
-precmd() { vcs_info }
+precmd() {
+  vcs_info
+  MISE_RUBY_VER=$(mise current ruby 2>/dev/null)
+}
 
 # Format the vcs_info_msg_0_ variable
 zstyle ':vcs_info:git:*' formats '(%b)'
@@ -23,7 +26,7 @@ zstyle ':vcs_info:git:*' formats '(%b)'
 setopt PROMPT_SUBST
 
 # Dynamic values must be in single quote for some reasonhttps://stackoverflow.com/a/11877873
-local ruby_version='$RUBY_VERSION'
+local ruby_version='$MISE_RUBY_VER'
 local current_dir='$PWD'
 local git='${vcs_info_msg_0_}'
 
