@@ -7,6 +7,16 @@ alias "docknuke"="docker system prune --all --volumes --force && docker volume p
 alias "cw"="bacon test"
 alias "exa"="lsd"
 
+function chruby() {
+  if [ -z "$1" ]; then
+    echo "Running $ mise ls ruby"
+    mise ls ruby
+  else
+    echo "Running $ mise use ruby@$1"
+    mise use "ruby@$1"
+  fi
+}
+
 # Output the next PR number for the current repo. Useful when writing changelog entries that must
 # link to the yet-to-be-created PR. We have to find the highest existing PR/issue/discussion ID
 # (since they all share the same ID pool) and then add one to it. This can't account for deleted
