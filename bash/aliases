@@ -11,6 +11,10 @@ function chruby() {
   if [ -z "$1" ]; then
     echo "Running $ mise ls ruby"
     mise ls ruby
+  elif [[ "$1" == -* ]]; then
+    echo "mise: invalid version '$1'" >&2
+    mise --help
+    return 1
   else
     echo "Running $ mise use ruby@$1"
     mise use "ruby@$1"
