@@ -197,6 +197,11 @@ alias empty='git commit --allow-empty -m empty'
 alias yeet='git push heroku main || git push heroku master'
 alias utc='TZ="UTC" date '
 
+function gitx() {
+  echo "$ smerge $*"
+  smerge "$@"
+}
+
 alias fff="bundle exec rspec --only-failures"
 
 function sup

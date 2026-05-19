@@ -54,6 +54,7 @@ vim +PluginInstall +qall
 - System preferences search "'default web browser"
 - `ruby-install ruby` versions
 - gitx https://rowanj.github.io/gitx/
+- sublime merge https://www.sublimemerge.com/docs/command_line
 - Setup github [via token](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
 - Setup [ssh key](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 - Setup [GPG key](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/generating-a-new-gpg-key)
