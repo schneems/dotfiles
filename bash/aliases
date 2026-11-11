@@ -3,6 +3,9 @@ alias "doc"='RUSTDOCFLAGS="-D warnings" cargo doc --all-features --document-priv
 
 alias "docknuke"="docker system prune --all --volumes --force && docker volume prune --all --force"
 
+# Moving at the speed of enterprise
+alias fixinternet="! sudo launchctl kickstart -k system/com.zscaler.tunnel && sudo launchctl kickstart -k system/com.zscaler.service"
+
 # Uses cargo limit https://github.com/alopatindev/cargo-limit
 alias "cw"="bacon test"
 alias "exa"="lsd"
