@@ -35,20 +35,6 @@ alias "cw"="bacon test"
 alias "cwn"="bacon nextest"
 alias "exa"="lsd"
 
-function chruby() {
-  if [ -z "$1" ]; then
-    echo "Running $ mise ls ruby"
-    mise ls ruby
-  elif [[ "$1" == -* ]]; then
-    echo "mise: invalid version '$1'" >&2
-    mise --help
-    return 1
-  else
-    echo "Running $ mise use ruby@$1"
-    mise use "ruby@$1"
-  fi
-}
-
 # Output the next PR number for the current repo. Useful when writing changelog entries that must
 # link to the yet-to-be-created PR. We have to find the highest existing PR/issue/discussion ID
 # (since they all share the same ID pool) and then add one to it. This can't account for deleted
@@ -225,10 +211,10 @@ alias empty='git commit --allow-empty -m empty'
 alias yeet='git push heroku main || git push heroku master'
 alias utc='TZ="UTC" date '
 
-function gitx() {
-  echo "$ smerge $*"
-  smerge "$@"
-}
+# function gitx() {
+#   echo "$ smerge $*"
+#   smerge "$@"
+# }
 
 alias fff="bundle exec rspec --only-failures"
 
@@ -321,7 +307,7 @@ function ruby_19_hash {
 
 # Command Enhancements
 
-alias rm=trash
+alias rm=/opt/homebrew/opt/trash/bin/trash
 
 alias start_redis='redis-server /usr/local/etc/redis.conf &'
 alias start_postgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
