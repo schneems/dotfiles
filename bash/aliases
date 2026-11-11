@@ -6,8 +6,33 @@ alias "docknuke"="docker system prune --all --volumes --force && docker volume p
 # Moving at the speed of enterprise
 alias fixinternet="! sudo launchctl kickstart -k system/com.zscaler.tunnel && sudo launchctl kickstart -k system/com.zscaler.service"
 
+# Watch and rerun an arbitrary shell command with bacon, e.g.
+#   cwi bin/test
+#   cwi 'TESTNAME=foo cargo uitest'
+#   cwi            # prompts for the command
+cwi() {
+  local cmd="$*"
+  if [ -z "$cmd" ]; then
+    printf 'Command to run: '
+    read -r cmd || return
+  fi
+
+  # Outside a Cargo project bacon doesn't know what to watch
+  if [ -f Cargo.toml ]; then set --; else set -- --watch .; fi
+
+  # bacon expands $CWI_CMD itself, so sh receives the raw command text
+  CWI_CMD="$cmd" bacon "$@" --config-toml '
+default_job = "cwi"
+[jobs.cwi]
+command = ["sh", "-c", "$CWI_CMD"]
+need_stdout = true
+allow_warnings = true
+'
+}
+
 # Uses cargo limit https://github.com/alopatindev/cargo-limit
 alias "cw"="bacon test"
+alias "cwn"="bacon nextest"
 alias "exa"="lsd"
 
 function chruby() {
